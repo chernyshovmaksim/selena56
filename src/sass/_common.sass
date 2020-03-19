@@ -1,0 +1,34 @@
+body 
+	+font-smoothing
+	font-family: $inter
+	font-size: 14px
+
+
+	.table 
+		+sh
+		outline: 1px solid $gold
+		background-color: $light
+		thead 
+			border-bottom: 1px solid $gold
+			tr 
+				th 
+					border-right: 1px solid $gold
+					&:last-child
+						border-right: none !important
+		tbody
+			tr
+				border-bottom: 1px solid $gold
+				&:last-child
+					border-bottom: none !important
+				td 
+					border-right: 1px solid $gold
+					&:last-child
+						border-right: none !important
+	@media(max-width: 640px)
+		.table
+			thead 
+				border-bottom: none !important
+			tbody 
+				tr 
+					td 
+						border-right: none !important

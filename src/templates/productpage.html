@@ -1,0 +1,164 @@
+---
+title: Product page
+---
+
+{% extends "layouts/_layout.html" %} 
+{% block content %} 
+{% include 'partials/small_header.html' %}
+
+<section class="content">
+	<div class="container">
+		<div class="title-left">
+			<h3>
+				Матрас Rich Cocos (Рич Кокос)
+			</h3>
+		</div>
+		<div class="product__info">
+			<div class="product__gallery">
+				<div class="product__image--main">
+					<div class="product__image">
+						<a href="img/product1.jpg" data-fancybox="images">
+							<img src="img/product1.jpg" alt="" />
+						</a>
+					</div>
+					<div class="product__image">
+						<a href="img/product2.jpg" data-fancybox="images">
+							<img src="img/product2.jpg" alt="" />
+						</a>
+					</div>
+					<div class="product__image">
+						<a href="img/product3.jpg" data-fancybox="images">
+							<img src="img/product3.jpg" alt="" />
+						</a>
+					</div>
+				</div>
+				<div class="product__images">
+					<div class="product__image">
+						<img src="img/product1.jpg" alt="placeholder+image" />
+					</div>
+					<div class="product__image">
+						<img src="img/product2.jpg" alt="placeholder+image" />
+					</div>
+					<div class="product__image">
+						<img src="img/product3.jpg" alt="placeholder+image" />
+					</div>
+				</div>
+			</div>
+
+			<div class="product__prices">
+				<table class="table tablesaw tablesaw-stack" data-tablesaw-mode="stack" data-tablesaw-sortable>
+					<thead>
+						<tr>
+							<th data-tablesaw-sortable-col data-tablesaw-sortable-numeric>Размер</th>
+							<th data-tablesaw-sortable-col>Цена</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>80x190 см.</td>
+							<td>14792 руб.</td>
+						</tr>
+						<tr>
+							<td>90x190 см.</td>
+							<td>16208 руб.</td>
+						</tr>
+						<tr>
+							<td>120x190 см.</td>
+							<td>20136 руб.</td>
+						</tr>
+						<tr>
+							<td>140x190 см.</td>
+							<td>23244 руб.</td>
+						</tr>
+						<tr>
+							<td>80x190 см.</td>
+							<td>14792 руб.</td>
+						</tr>
+						<tr>
+							<td>90x190 см.</td>
+							<td>16208 руб.</td>
+						</tr>
+						<tr>
+							<td>120x190 см.</td>
+							<td>20136 руб.</td>
+						</tr>
+						<tr>
+							<td>140x190 см.</td>
+							<td>23244 руб.</td>
+						</tr>
+						<tr>
+							<td>80x190 см.</td>
+							<td>14792 руб.</td>
+						</tr>
+						<tr>
+							<td>90x190 см.</td>
+							<td>16208 руб.</td>
+						</tr>
+						<tr>
+							<td>120x190 см.</td>
+							<td>20136 руб.</td>
+						</tr>
+						<tr>
+							<td>140x190 см.</td>
+							<td>23244 руб.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="product__description">
+				<div class="tabs">
+					<div class="tabs__nav">
+						<nav>
+							<a href="#specifications">Характеристики</a>
+							<a href="#composition">Состав</a>
+						</nav>
+					</div>
+					<div class="tabs__body">
+						<div class="tab__block" id="specifications">
+							<div class="tab__specifiсation">
+								<div class="specification__row">
+									<span class="specification__title">Высота</span> 
+									<span class="specification__value">27см</span>
+								</div>
+								<div class="specification__row">
+									<span class="specification__title">Пружинный блок</span> 
+									<span class="specification__value">Независимый блок</span>
+								</div>
+								<div class="specification__row">
+									<span class="specification__title">Жесткость</span> 
+									<span class="specification__value">Жесткий</span>
+								</div>
+								<div class="specification__row">
+									<span class="specification__title">Максимальная нагрузка</span> 
+									<span class="specification__value">150кг.</span>
+								</div>
+							</div>
+						</div>
+						<div class="tab__block" id="composition">
+							<ul>
+								<li>Система комфортности: стрейчевый жаккард Sonberry Intense</li>
+								<li>Кокосовое полотно 30 мм</li>
+								<li>Изоляционный слой - термовойлок</li>
+								<li>Система поддержки: независимый пружинный блок Multi Pocket (h 140 мм, плотность 1024 пружины на одно спальное место)</li>
+								<li>Бурлет - мебельная ткань велюр серого цвета, ручки</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="title">
+			<h3>
+				Популярное
+			</h3>
+		</div>
+		<div class="popular">
+			{% for i in range(0, 4) %}
+				{% include 'partials/product.html' %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+{% endblock %}

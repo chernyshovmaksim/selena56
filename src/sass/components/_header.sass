@@ -1,0 +1,96 @@
+.header 
+	&__callback
+		+sh
+		background-color: $gold
+		.container 
+			display: flex
+			justify-content: space-between
+			align-items: center
+			div 
+				padding: 0.5em 0
+				font-size: 14px
+				color: $light
+				a 
+					color: $light
+					text-decoration: none
+			.callback__social
+				display: flex
+				a 
+					margin-right: 1em
+					font-size: 24px
+	&__top
+		margin-top: 1em
+		.container
+			display: flex
+			justify-content: space-between
+			align-items: center
+			@media(max-width: 640px)
+				flex-direction: column
+				.header__nav
+					margin: 1em 0
+					nav
+						a
+							margin-left: 0 !important
+							margin-top: 1em
+							padding-bottom: 0.5em
+							border-bottom: 1px rgba($dark, 0.15) dashed
+			.header__logo
+				a 
+					display: flex
+					align-items: center
+					color: $gold
+					text-decoration: none
+					text-transform: uppercase
+					span 
+						margin-left: 0.25em
+						font-weight: 900
+			.header__nav
+				nav 
+					a 
+						margin-left: 1em
+						color: $dark
+						text-decoration: none
+						font-weight: 700
+						font-size: 14px
+						transition: all .17s
+						&:hover
+							color: $gold
+							transition: all .17s
+				@media(max-width: 640px)
+					nav 
+						display: flex 
+						flex-direction: column
+	&__hero
+		min-height: 50vh
+		position: relative
+		display: flex
+		align-items: center
+		+image('../img/hero_bg.jpeg')
+		+cover
+
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(#fff, 0.6)
+			z-index: 0 !important
+		.container
+			z-index: 10 !important
+			color: rgba($dark, 0.9)
+			h1, h2 
+				font-weight: 500
+
+			h1 
+				font-weight: 900
+			h2
+				font-size: 14px
+			@media(max-width: 640px)
+				h1
+					font-size: 18px
+				h2 
+					font-size: 14px
+					color: #000
+					padding-bottom: 1em

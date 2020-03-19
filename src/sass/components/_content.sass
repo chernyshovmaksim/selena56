@@ -1,0 +1,138 @@
+section.content 
+	padding-bottom: 5em
+
+	.container
+		.title
+			h3 
+				font-weight: 300
+				font-size: 26px
+				text-transform: uppercase
+				margin-bottom: 2em
+				margin-top: 3em
+				text-align: center
+		.title-left
+			h3
+				font-weight: 300
+				font-size: 26px
+				text-transform: uppercase
+				margin: 3em 0
+				text-align: left
+		
+		.popular
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-gap: 1rem
+			grid-row-gap: 5em
+
+			.product 
+				width: 100%
+				padding: 1em 0.5em
+				+sh
+				&__photo
+					a 
+						img 
+							width: 100%
+				&__name
+					font-weight: 700
+					color: $dark
+					margin-top: 0.5em
+				&__price
+					font-weight: 900
+					font-size: 16px
+					margin: 0.5em 0
+					a 
+						color: $gold
+						text-decoration: none
+				&__description
+					font-size: 13px
+					color: rgba($dark, 0.8)
+				&__more
+					+sh
+					background-color: $gold 
+					margin-top: 0.5em
+					text-align: center 
+					font-weight: 300 
+					padding: 0.5em 0
+					position: relative
+					a 
+						position: relative
+						display: block
+						width: 100%
+						height: 100%
+						color: $dark
+						text-decoration: none
+
+
+			@media(max-width: 768px)
+				grid-template-columns: repeat(3, 1fr)
+			@media(max-width: 640px)
+				grid-template-columns: 1fr
+
+
+
+		.product__info
+			display: grid
+			grid-template-columns: repeat(4, 1fr)
+			grid-template-areas: "gallery gallery prices prices" "description description description description"
+			grid-gap: 1em
+			.product__gallery
+				grid-area: gallery
+				overflow: hidden
+				padding: 0.5em
+				.product__image--main
+					.product__image
+						img
+							width: 100%
+							height: 100%
+							
+				.product__images
+					margin-top: 1em
+					.product__image
+						img
+							height: 100px
+			.product__prices
+				grid-area: prices
+			.product__description
+				grid-area: description
+				.tabs
+					+sh
+					&__nav
+						nav
+							a 
+								display: inline-block
+								padding: 0.5em
+								text-decoration: none
+								font-weight: 700
+								color: $dark
+								border: 1px solid $gold
+								border-bottom: none
+								margin-bottom: -1px
+								background-color: $gold
+								&.active
+									background: $light
+					&__body
+						background-color: $light
+						.tab__block
+							padding: 0.5em
+							border: 1px solid $gold
+							display: none
+							.tab__specifiсation
+								.specification__row
+									padding: 0.5em 0
+									display: flex
+									justify-content: space-between
+									border-bottom: 1px dashed $gold
+									&:last-child
+										border-bottom: none !important
+									.specification__title
+										font-weight: 700
+							ul
+								li
+									margin-bottom: 0.5em
+									border-bottom: 1px dashed $gold
+									padding-bottom: 0.5em
+		@media( max-width:  640px)
+			.product__info
+				grid-template-columns: 1fr
+				grid-template-areas: "gallery" "prices" "prices" "description"
+			

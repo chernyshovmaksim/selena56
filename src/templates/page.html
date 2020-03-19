@@ -1,0 +1,37 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% include 'partials/header.html' %}
+
+	<section class="content">
+
+		<div class="container">
+			<div class="title">
+				<h3>
+					Популярное
+				</h3>
+			</div>
+			<div class="popular">
+				{% for i in range(0, 4) %}
+					{% include 'partials/product.html' %}
+				{% endfor %}
+			</div>
+			<div class="title">
+				<h3>
+					Новые поступления
+				</h3>
+			</div>
+			<div class="popular">
+				{% for i in range(0, 4) %}
+					{% include 'partials/product.html' %}
+				{% endfor %}
+			</div>
+		</div>
+
+	</section>
+
+{% endblock %}
