@@ -24,16 +24,20 @@
 			display: flex
 			justify-content: space-between
 			align-items: center
+
+
+
+			@media(min-width: 640px)
+				.header__bars
+					display: none
 			@media(max-width: 640px)
-				flex-direction: column
-				.header__nav
-					margin: 1em 0
-					nav
-						a
-							margin-left: 0 !important
-							margin-top: 1em
-							padding-bottom: 0.5em
-							border-bottom: 1px rgba($dark, 0.15) dashed
+				.header__bars
+					display: block
+					color: $gold 
+					font-size: 2em
+					cursor: pointer
+
+
 			.header__logo
 				a 
 					display: flex
@@ -58,8 +62,7 @@
 							transition: all .17s
 				@media(max-width: 640px)
 					nav 
-						display: flex 
-						flex-direction: column
+						display: none
 	&__hero
 		min-height: 50vh
 		position: relative

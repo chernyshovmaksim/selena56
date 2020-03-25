@@ -1,17 +1,21 @@
-body 
+body
 	+font-smoothing
 	font-family: $inter
 	font-size: 14px
 
 
-	.table 
+	.no-scroll
+		+no-scroll
+
+
+	.table
 		+sh
 		outline: 1px solid $gold
 		background-color: $light
-		thead 
+		thead
 			border-bottom: 1px solid $gold
-			tr 
-				th 
+			tr
+				th
 					border-right: 1px solid $gold
 					&:last-child
 						border-right: none !important
@@ -20,15 +24,15 @@ body
 				border-bottom: 1px solid $gold
 				&:last-child
 					border-bottom: none !important
-				td 
+				td
 					border-right: 1px solid $gold
 					&:last-child
 						border-right: none !important
 	@media(max-width: 640px)
 		.table
-			thead 
+			thead
 				border-bottom: none !important
-			tbody 
-				tr 
-					td 
+			tbody
+				tr
+					td
 						border-right: none !important

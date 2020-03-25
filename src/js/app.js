@@ -1,12 +1,21 @@
-import Tablesaw from "tablesaw";
 import $ from "jquery";
-import	Tabs from './lib/tabs';
+import Tablesaw from "tablesaw";
+
+import Tabs from './lib/tabs';
+import Footer from './lib/footerSlick';
+import MobileMenu from './lib/mobileMenu';
+
 
 import "slick-carousel";
 import "@fancyapps/fancybox";
 
-// Tabs init
+
 Tabs();
+
+Footer();
+
+MobileMenu();
+
 
 // Tablesaw init
 Tablesaw.init();

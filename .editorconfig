@@ -10,22 +10,22 @@ insert_final_newline = true
 charset = utf-8
 
 [*.js]
-indent_style = space
-indent_size = 2
+indent_style = tab
+indent_size = 4
 
 [*.scss]
 indent_size = 4
 
 [*.sass]
-indent_size = tab
+indent_size = 4
 indent_style = tab
 
 [*.sss]
 indent_size = tab
 indent_style = tab
 
-[*.pug]
-indent_size = tab
+[*.html]
+indent_size = 4
 indent_style = tab
 
 [{bower.json,package.json,.travis.yml}]
