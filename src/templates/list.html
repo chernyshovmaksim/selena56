@@ -1,0 +1,31 @@
+---
+title: Simple page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include 'partials/small_header.html' %}
+
+	<section class="content">
+
+		<div class="container">
+			<div class="title-left">
+				<h3>
+					Страница категории
+				</h3>
+			</div>
+
+			<div class="popular">
+				{% for i in range(0, 16) %}
+					{% include 'partials/product.html' %}
+				{% endfor %}
+			</div>
+			<div class="pagination">
+
+			</div>
+		</div>
+
+	</section>
+
+{% endblock %}
