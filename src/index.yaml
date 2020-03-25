@@ -3,7 +3,7 @@ ProjectTitle: app
 PageList:
 - file: page.html
   ready: 50
-- file: simplepage.html
+- file: simple.html
   ready: 50
-- file: productpage.html
+- file: product.html
   ready: 50
