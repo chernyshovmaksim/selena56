@@ -32,3 +32,4 @@ _tmp
 node_modules
 bower_components
 build
+package-lock.json
