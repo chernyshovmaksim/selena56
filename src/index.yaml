@@ -1,7 +1,7 @@
 ProjectTitle: app
 
 PageList:
-- file: page.html
+- file: main.html
   ready: 50
 - file: simple.html
   ready: 50
