@@ -12,13 +12,19 @@
 	transition: 0.25s
 	text-transform: uppercase
 	nav
-		display: flex
-		flex-direction: column
-		a
-			color: $light
-			text-decoration: none
-			font-size: 1.5em
-			padding: 1em 0
+		ul
+			li
+				margin-bottom: 1em
+				span 
+					display: block
+					margin-bottom: 1em
+				span, a 
+					color: $light
+					text-decoration: none
+		li 
+			ul 
+				margin-left: 2em
+				margin-bottom: 2em
 	&__close
 		position: absolute
 		right: 30px
