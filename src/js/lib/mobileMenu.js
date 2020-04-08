@@ -1,5 +1,8 @@
 import 'mmenu-light';
 function mobileMenu() {
+
+	const link = document.querySelector('a[href="#my-menu"]');
+
 	const menu = new MmenuLight(
 		document.querySelector("#my-menu")
 	);
@@ -9,11 +12,12 @@ function mobileMenu() {
 	});
 	const drawer = menu.offcanvas();
 
-	document.querySelector('a[href="#my-menu"]')
-		.addEventListener('click', (evnt) => {
+	if (link) {
+		link.addEventListener('click', (evnt) => {
 			evnt.preventDefault();
 			drawer.open();
 		});
+	}
 }
 
 module.exports = mobileMenu;
