@@ -21,12 +21,12 @@ section.content
 		.popular
 			display: grid
 			grid-template-columns: repeat(4, 1fr)
-			grid-gap: 1rem
-			grid-row-gap: 5em
+			grid-gap: $ss*2
+			grid-row-gap: $ss*4
 
 			.product 
 				width: 100%
-				padding: 1em 0.5em
+				padding: $ss
 				+sh
 				&__photo
 					a 
@@ -36,10 +36,11 @@ section.content
 					font-weight: 700
 					color: $dark
 					margin-top: 0.5em
+					font-size: $ss
 				&__price
-					font-weight: 900
-					font-size: 16px
-					margin: 0.5em 0
+					font-weight: 700
+					font-size: $ss
+					margin: $ss*1.5 0
 					a 
 						color: $gold
 						text-decoration: none
@@ -50,9 +51,9 @@ section.content
 					+sh
 					background-color: $gold 
 					margin-top: 0.5em
-					text-align: center 
+					text-align: left 
 					font-weight: 300 
-					padding: 0.5em 0
+					padding: $ss*0.5
 					position: relative
 					a 
 						position: relative

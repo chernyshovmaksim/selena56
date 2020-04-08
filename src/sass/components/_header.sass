@@ -7,8 +7,8 @@
 			justify-content: space-between
 			align-items: center
 			div
-				padding: 0.5em 0
-				font-size: 14px
+				padding: $ss 0
+				font-size: $ss
 				color: $light
 				a
 					color: $light
@@ -16,10 +16,10 @@
 			.callback__social
 				display: flex
 				a
-					margin-right: 1em
-					font-size: 24px
+					margin-right: $ss
+					font-size: $ss
 	&__top
-		margin-top: 1em
+		margin-top: $ss
 		.container
 			display: flex
 			justify-content: space-between
@@ -34,7 +34,7 @@
 				.header__bars
 					display: block
 					color: $gold
-					font-size: 2em
+					font-size: $ss*2
 					cursor: pointer
 
 
@@ -46,7 +46,7 @@
 					text-decoration: none
 					text-transform: uppercase
 					span
-						margin-left: 0.25em
+						margin-left: $ss*0.5
 						font-weight: 900
 			.header__nav
 				nav a
@@ -57,7 +57,7 @@
 						display: flex
 						position: relative
 						li
-							margin-left: 1em
+							margin-left: $ss
 							position: relative
 							&:hover
 								.sub-nav__list
@@ -67,12 +67,11 @@
 						z-index: 999
 						top: 0
 						left: 0
-						padding-top: 2em
+						padding-top: $ss*2
 				.sub-nav__list
 					display: flex
 					flex-direction: column
 					display: none
-					// width: 230px
 					li
 						display: flex
 						margin: 0
@@ -80,7 +79,7 @@
 						margin-left: 0 !important
 						background-color: $light
 						a
-							padding: 0.5em
+							padding: $ss*0.5
 							width: 100%
 							border-bottom: 1px solid $gold
 							transition: all 0.14s
@@ -113,23 +112,23 @@
 				padding: 0
 				margin: 0
 				width: 50%
-				background-color: $light
-				color: $dark
+				background-color: rgba($dark, 0.5)
+				color: $light
 
 			h1
 				font-weight: 900
-				padding-top: 30px
-				padding-left: 30px
+				padding-top: $ss
+				padding-left: $ss
 			h2
 				font-size: 14px
-				padding: 30px 0
-				padding-left: 30px
+				padding: $ss 0
+				padding-left: $ss
 			@media(max-width: 640px)
 				h1, h2
 					width: 100%
 				h1
-					font-size: 18px
+					font-size: $ss
 				h2
-					font-size: 14px
+					font-size: $ss*0.7
 					color: #000
-					padding-bottom: 30px
+					padding-bottom: $ss
