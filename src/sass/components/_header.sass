@@ -27,15 +27,14 @@
 
 
 
-			@media(min-width: 640px)
-				.header__bars
-					display: none
-			@media(max-width: 640px)
-				.header__bars
-					display: block
+
+			.header__bars
+				display: block
+				color: $gold
+				font-size: $ss*1.5
+				cursor: pointer
+				a 
 					color: $gold
-					font-size: $ss*2
-					cursor: pointer
 
 
 			.header__logo
@@ -48,52 +47,6 @@
 					span
 						margin-left: $ss*0.5
 						font-weight: 900
-			.header__nav
-				nav a
-					text-decoration: none
-					color: $dark
-				nav
-					.nav__list
-						display: flex
-						position: relative
-						li
-							margin-left: $ss
-							position: relative
-							&:hover
-								.sub-nav__list
-									display: block
-					.nav__list .sub-nav__list
-						position: absolute
-						z-index: 999
-						top: 0
-						left: 0
-						padding-top: $ss*2
-				.sub-nav__list
-					display: flex
-					flex-direction: column
-					display: none
-					li
-						display: flex
-						margin: 0
-						padding: 0
-						margin-left: 0 !important
-						background-color: $light
-						a
-							padding: $ss*0.5
-							width: 100%
-							border-bottom: 1px solid $gold
-							transition: all 0.14s
-							&:hover
-								background-color: $gold
-								color: $light
-
-				@media(max-width: 640px)
-					nav
-						display: none
-
-
-
-
 
 
 	&__hero
@@ -129,6 +82,5 @@
 				h1
 					font-size: $ss
 				h2
-					font-size: $ss*0.7
-					color: #000
+					font-size: $ss*0.9
 					padding-bottom: $ss

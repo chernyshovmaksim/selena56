@@ -1,29 +1,27 @@
 import $ from "jquery";
 import Tablesaw from "tablesaw";
+import "slick-carousel";
+import "@fancyapps/fancybox";
 
 import Tabs from './lib/tabs';
 import Footer from './lib/footerSlick';
 import MobileMenu from './lib/mobileMenu';
 
 
-import "slick-carousel";
-import "@fancyapps/fancybox";
-
-
-Tabs();
-
-Footer();
-
-MobileMenu();
-
-
-// Tablesaw init
-Tablesaw.init();
-
 
 // Slick init
 // eslint-disable-next-line func-names
-$(document).ready(function(){
+$(document).ready(function () {
+
+	Tabs();
+
+	Footer();
+
+	MobileMenu();
+
+	// Tablesaw init
+	Tablesaw.init();
+
 	$(".product__image--main").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,

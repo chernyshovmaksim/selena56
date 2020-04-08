@@ -1,19 +1,19 @@
+import 'mmenu-light';
 function mobileMenu() {
-	let closeBtn = $('.fa-times');
-	let barsBtn = $('.fa-bars');
-	let menu = $('.mobile-menu');
+	const menu = new MmenuLight(
+		document.querySelector("#my-menu")
+	);
 
-	$(closeBtn).on('click', function(e){
-		$(menu).css({
-			left: '100%'
-		});
+	const navigator = menu.navigation({
+		title: 'Меню сайта'
 	});
+	const drawer = menu.offcanvas();
 
-	$(barsBtn).on('click', function(e){
-		$(menu).css({
-			left: '0'
+	document.querySelector('a[href="#my-menu"]')
+		.addEventListener('click', (evnt) => {
+			evnt.preventDefault();
+			drawer.open();
 		});
-	});
 }
 
 module.exports = mobileMenu;
