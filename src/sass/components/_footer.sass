@@ -1,19 +1,19 @@
 footer
 	background-color: $dark
-	padding: 1em 0
+	padding: $ss 0
 	.container
 		display: flex 
 		justify-content: space-between
-		font-size: 11px
+		font-size: $ss*0.7
 		.footer__nav
 			nav
 				a
 					color: $light
 					text-decoration: none
-					margin-right: 0.5em
+					margin-right: $ss*0.5
 		.footer__copyright
 			color: rgba($light, 0.5)
 		@media(max-width: 640px)
 			flex-direction: column
 			.footer__copyright
-				margin-top: 1em
+				margin-top: $ss
