@@ -37,4 +37,9 @@ $(document).ready(function () {
 		centerMode: true,
 		focusOnSelect: true
 	});
+
+	$(".slider").slick({
+		autoplay: true,
+		dots: true
+	});
 });
